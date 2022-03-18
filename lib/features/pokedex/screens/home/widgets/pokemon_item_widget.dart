@@ -43,7 +43,7 @@ class PokemonItemWidget extends StatelessWidget {
                           style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 16),
+                              fontSize: 15),
                         ),
                       ),
                       Text(
@@ -69,7 +69,7 @@ class PokemonItemWidget extends StatelessWidget {
                       ),
                       const Flexible(
                           child: SizedBox(
-                        height: 100,
+                        height: 80,
                         width: 100,
                       )),
                     ],
@@ -83,7 +83,7 @@ class PokemonItemWidget extends StatelessWidget {
             right: 2,
             child: Image.network(
               pokemon.img,
-              height: 120,
+              height: 90,
             ),
           ),
         ],
