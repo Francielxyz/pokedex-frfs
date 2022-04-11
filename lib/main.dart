@@ -1,7 +1,7 @@
+import '/common/repositories/pokemon_repository.dart';
+import '/features/pokedex/route.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/repositories/pokemon_repository.dart';
-import 'package:pokedex/features/pokedex/route.dart';
 
 void main() {
   runApp(const MyApp());

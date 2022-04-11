@@ -1,5 +1,5 @@
+import '/common/models/pokemon.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/models/pokemon.dart';
 import 'detail_item_list_widget.dart';
 
 class DetailListWidget extends StatelessWidget {

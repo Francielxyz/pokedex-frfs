@@ -1,7 +1,7 @@
+import '/common/repositories/pokemon_repository.dart';
+import '/features/pokedex/screens/details/container/detail_container.dart';
+import '/features/pokedex/screens/home/container/home_container.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/repositories/pokemon_repository.dart';
-import 'package:pokedex/features/pokedex/screens/details/container/detail_container.dart';
-import 'package:pokedex/features/pokedex/screens/home/container/home_container.dart';
 
 class PokedexRoute extends StatelessWidget {
   const PokedexRoute({Key? key, required this.repository}) : super(key: key);

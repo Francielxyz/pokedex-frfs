@@ -4,26 +4,40 @@ class TypeWidget extends StatelessWidget {
   const TypeWidget({
     Key? key,
     required this.name,
+    required this.paddingBottom,
+    required this.paddingLeft,
+    required this.withOpacity,
+    required this.borderRadius,
+    required this.paddingAll,
+    required this.fonteSize,
+    required this.corFundo,
   }) : super(key: key);
+  final double paddingBottom;
+  final double paddingLeft;
+  final double withOpacity;
+  final double borderRadius;
+  final double paddingAll;
+  final double fonteSize;
   final String name;
+  final Color corFundo;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
+      padding: EdgeInsets.only(bottom: paddingBottom, left: paddingLeft),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(16),
+          color: corFundo.withOpacity(withOpacity),
+          borderRadius: BorderRadius.circular(borderRadius),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(6),
+          padding: EdgeInsets.all(paddingAll),
           child: Text(
             name,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 12,
+              fontSize: fonteSize,
             ),
           ),
         ),

@@ -1,7 +1,8 @@
+import '/common/models/pokemon.dart';
+import '/features/pokedex/screens/details/pages/widgets/detail_list_widget.dart';
+import '/features/pokedex/screens/details/pages/widgets/details_app_bar_widget.dart';
+import '/features/pokedex/screens/home/widgets/type_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/models/pokemon.dart';
-import 'package:pokedex/features/pokedex/screens/details/pages/widgets/detail_list_widget.dart';
-import 'package:pokedex/features/pokedex/screens/details/pages/widgets/details_app_bar_widget.dart';
 
 class DetailPage extends StatefulWidget {
   DetailPage({
@@ -79,6 +80,41 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                       ),
                     ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, top: 18),
+                          child: Text(
+                            "Weaknesses",
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: widget.pokemon.baseColor,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: widget.pokemon.weaknesses
+                                .map(
+                                  (e) => TypeWidget(
+                                    paddingBottom: 0,
+                                    paddingLeft: 10,
+                                    withOpacity: 0.5,
+                                    borderRadius: 12,
+                                    paddingAll: 6,
+                                    fonteSize: 18,
+                                    name: e,
+                                    corFundo: widget.pokemon.baseColor!,
+                                  ),
+                                ).toList(),
+                          ),
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ),

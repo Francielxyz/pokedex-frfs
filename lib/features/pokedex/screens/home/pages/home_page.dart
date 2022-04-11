@@ -1,7 +1,7 @@
+import '/common/models/pokemon.dart';
+import '/features/pokedex/screens/details/container/detail_container.dart';
+import '/features/pokedex/screens/home/widgets/pokemon_item_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/models/pokemon.dart';
-import 'package:pokedex/features/pokedex/screens/details/container/detail_container.dart';
-import 'package:pokedex/features/pokedex/screens/home/widgets/pokemon_item_widget.dart';
 
 class HomePage extends StatelessWidget {
   final List<Pokemon> list;

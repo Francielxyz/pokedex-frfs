@@ -1,5 +1,5 @@
+import '/common/models/pokemon.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/models/pokemon.dart';
 
 class DetailAppBarWidget extends StatelessWidget {
   const DetailAppBarWidget({
@@ -26,14 +26,14 @@ class DetailAppBarWidget extends StatelessWidget {
       title: AnimatedOpacity(
         duration: const Duration(milliseconds: 300),
         opacity: isOnTop ? 0 : 1,
-        child: Text(
-          pokemon.name,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
+        // child: Text(
+        //   pokemon.name,
+        //   style: const TextStyle(
+        //     fontSize: 16,
+        //     fontWeight: FontWeight.bold,
+        //     color: Colors.white,
+        //   ),
+        // ),
       ),
     );
   }

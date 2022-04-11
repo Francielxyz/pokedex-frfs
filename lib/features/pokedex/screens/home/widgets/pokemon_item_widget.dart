@@ -1,7 +1,7 @@
+import '/common/models/pokemon.dart';
+import '/features/pokedex/screens/details/container/detail_container.dart';
+import '/features/pokedex/screens/home/widgets/type_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/common/models/pokemon.dart';
-import 'package:pokedex/features/pokedex/screens/details/container/detail_container.dart';
-import 'package:pokedex/features/pokedex/screens/home/widgets/type_widget.dart';
 
 class PokemonItemWidget extends StatelessWidget {
   const PokemonItemWidget({
@@ -29,7 +29,7 @@ class PokemonItemWidget extends StatelessWidget {
                 color: pokemon.baseColor!.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(16)),
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -62,9 +62,17 @@ class PokemonItemWidget extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: pokemon.type
-                            .map((e) => TypeWidget(
+                            .map(
+                              (e) => TypeWidget(
+                                  paddingBottom: 4,
+                                  paddingLeft: 0,
+                                  withOpacity: 0.2,
+                                  borderRadius: 16,
+                                  paddingAll: 6,
+                                  fonteSize: 12,
                                   name: e,
-                                ))
+                                  corFundo: Colors.white),
+                            )
                             .toList(),
                       ),
                       const Flexible(
@@ -83,7 +91,7 @@ class PokemonItemWidget extends StatelessWidget {
             right: 2,
             child: Image.network(
               pokemon.img,
-              height: 90,
+              height: 88,
             ),
           ),
         ],
